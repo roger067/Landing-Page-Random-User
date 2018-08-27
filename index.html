@@ -250,14 +250,14 @@
 
 <footer>
     <div id = "map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15003.55841667188!2d-43.931904!3d-19.9290564!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9c8a1493cdd0eed2!2sSporTI+-+Tecnologia+e+Gest%C3%A3o+no+Esporte!5e0!3m2!1spt-BR!2sbr!4v1535366268540" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        
     </div>
     <div class = "container" style="position: relative;">
         <div class = "adress">
             <p class = "title-text text-m" style = "font-size: 28px; margin-left: 28px">
                 Endereço
             </p>
-            <p class = "text-lighter gray-m" style="margin-bottom:16px">
+            <!--<p class = "text-lighter gray-m" style="margin-bottom:16px">
                 <i class="fa fa-map-marker yellow" style="font-size:24px; margin-right: 12px"></i>
                 R. Paraíba, 330 - 17° Andar - Funcionários
             </p>
@@ -268,27 +268,186 @@
             <p class = "text-lighter gray-m" style="margin-bottom:16px">
                 <i class="fa fa-phone yellow" style="font-size:24px; margin-right: 12px"></i>
                 (31) 2535-9003
-            </p>
-            <p class = "text-lighter gray-m" style="margin-bottom:16px">
-                <i class="fa fa fa-envelope yellow" style="font-size:24px; margin-right: 12px"></i>
-                <a href = "">rosestolato.rogerio@gmail.com</a>
+            </p>-->
+            <p id="user" class = "text-lighter gray-m" style="margin-bottom:16px">
             </p>
         </div>
     </div>
 </footer>
-<!--
+
 <script>  
   var map;
   function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: -34.397, lng: 150.644},
-      zoom: 8
+      center: {lat: -19.927624, lng: -43.932913},
+      zoom: 8,
+      styles:
+      [
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#bdbdbd"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#eeeeee"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e5e5e5"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dadada"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e5e5e5"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#eeeeee"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#c9c9c9"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  }
+]
     });
     
   }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxn63Yvnk-Ssd8izU-aZ5ntyGL36AzWbI&callback=initMap" async defer></script>
--->
+
 
 </body>
 </html>

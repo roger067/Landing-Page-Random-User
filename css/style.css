@@ -254,6 +254,11 @@ section{
     box-shadow: 0 4px 18px 0 rgba(0,0,0,0.12), 0 7px 10px -5px rgba(0,0,0,0.15) !important;
 }
 
+.fa.fa-envelope{
+    font-size:24px;
+    margin-right: 12px;
+}
+
 @media screen and (max-width: 768px) {
     .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
         background: #00bcd4;

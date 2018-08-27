@@ -119,45 +119,39 @@ $(document).ready(function(){
 
 
 //RANDOM user
-function createNode(element){
-  return  document.createElement(element);
-}
+$(document).ready(function(){
+  
+    $.ajax({
+      url: 'https://randomuser.me/api/',
+      data: {results: 1}, 
+      dataType: 'json',
+      success: function(data){
+        $.each(data.results, function(index, user){
+          var email = user.email;
+          var street = user.location.street;
+          var phone = user.phone;
+          var cell = user.cell;
+  
+          // prepare DOM object
+            
+          var locationTag = $('<p class = "text-lighter gray-m" style="margin-bottom:16px">');
+          locationTag.html('<i class="fa fa-map-marker yellow" style="font-size:24px; margin-right: 12px"></i>' + street);
 
-function append(parent, el){
-  return  document.appendChild(el);
-}
+          var phoneTag = $('<p class = "text-lighter gray-m" style="margin-bottom:16px">');
+          phoneTag.html('<i class="fa fa-phone yellow" style="font-size:24px; margin-right: 12px"></i>' + phone);
 
-const ul = document.getElementById("authors");
-const url = 'https://randomuser.me/api/?results=10'
+          var cellTag = $('<p class = "text-lighter gray-m" style="margin-bottom:16px">');
+          cellTag.html('<i class="fa fa-phone yellow" style="font-size:24px; margin-right: 12px"></i>' + cell);
 
-fetch (url)
-  .then((resp) => resp.json())
-  .then(function(data){
-      let authors = data.results;
-      return authors.map(function(author){
-
-        let li = createNode('li'),
-        span = createNode('span');
-
-        span.innerHTML = `${author.name.first} ${author.name.last}`;
-
-        append(li,img),
-        append(li, span),
-        append(ul,li);
-
-      });
-
-  })
-  .catch(function(error){
-    console.log(JSON.stringify(error));
-  });
-
-
-  $.ajax({
-    url: 'https://randomuser.me/api/',
-    dataType: 'json',
-    success: function(data) {
-      console.log(data);
-    }
+          var emailTag = $('<p class = "text-lighter gray-m" style="margin-bottom:16px">');
+          emailTag.html('<i class="fa fa-envelope yellow" style="font-size:24px; margin-right: 12px"></i>' + email).prop('href', 'mailto:'+email);
+  
+          // insert DOM object into DOM
+          $('#user').append(locationTag).append(phoneTag).append(cellTag).append(emailTag);
+          
+        });
+      }
+    });
+    
   });
 
